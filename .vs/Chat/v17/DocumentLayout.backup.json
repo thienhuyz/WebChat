@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|c:\\users\\dell\\desktop\\new folder\\chat\\chat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|solutionrelative:chat\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|c:\\users\\dell\\desktop\\new folder\\chat\\chat\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|solutionrelative:chat\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|c:\\users\\dell\\desktop\\new folder\\chat\\chat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|solutionrelative:chat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|c:\\users\\dell\\desktop\\new folder\\chat\\chat\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|solutionrelative:chat\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|c:\\users\\dell\\desktop\\new folder\\chat\\chat\\identityserver\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094FA734-89AA-4DB9-8546-D0E66D378855}|Chat\\Chat.csproj|solutionrelative:chat\\identityserver\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 723,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Program.cs",
+              "RelativeDocumentMoniker": "Chat\\Program.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Program.cs",
+              "RelativeToolTip": "Chat\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T10:24:14.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Chat\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Chat\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-18T11:46:13.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Chat\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Chat\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T12:14:52.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Chat\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Chat\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T12:13:35.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\IdentityServer\\Config.cs",
+              "RelativeDocumentMoniker": "Chat\\IdentityServer\\Config.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\New folder\\Chat\\Chat\\IdentityServer\\Config.cs",
+              "RelativeToolTip": "Chat\\IdentityServer\\Config.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T10:55:53.803Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 981,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

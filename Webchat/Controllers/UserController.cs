@@ -36,13 +36,13 @@ namespace Chat.Controllers
             var dob = DateTime.Parse(request.Dob);
             var user = new User() // vì tạo một User lên ta dùng User Entites luân vì nó có đủ các tường
             {
-                Id = Guid.NewGuid().ToString(),
-                Email = request.Email,
-                BirthDay = DateTime.Parse(request.Dob),
-                UserName = request.UserName,
-                DisPlayName = request.LastName,
+                //Id = Guid.NewGuid().ToString(),
+                //Email = request.Email,
+                //BirthDay = DateTime.Parse(request.Dob),
+                //UserName = request.UserName,
+                //DisPlayName = request.LastName,
 
-                PhoneNumber = request.PhoneNumber,
+                //PhoneNumber = request.PhoneNumber,
 
             };
             var result = await _userManager.CreateAsync(user, request.Password); // phương thức CreateAsync đã được Identity.Core, hỗ trợ , bài miên phí ta phải viết nó
@@ -67,12 +67,12 @@ namespace Chat.Controllers
 
             var uservms = await users.Select(u => new UserViewModel() // vì muốn xem lên ta dùng UserVm
             {
-                Id = u.Id,
-                UserName = u.UserName,
-                Dob = u.BirthDay,
-                Email = u.Email,
-                PhoneNumber = u.PhoneNumber,
-                FirstName = u.DisPlayName,
+                //Id = u.Id,
+                //UserName = u.UserName,
+                //Dob = u.BirthDay,
+                //Email = u.Email,
+                //PhoneNumber = u.PhoneNumber,
+                //FirstName = u.DisPlayName,
 
             }).ToListAsync();
 
@@ -89,12 +89,12 @@ namespace Chat.Controllers
 
             var userVm = new UserViewModel()
             {
-                Id = user.Id,
-                UserName = user.UserName,
-                Dob = user.BirthDay,
-                Email = user.Email,
-                PhoneNumber = user.PhoneNumber,
-                FirstName = user.DisPlayName,
+                //Id = user.Id,
+                //UserName = user.UserName,
+                //Dob = user.BirthDay,
+                //Email = user.Email,
+                //PhoneNumber = user.PhoneNumber,
+                //FirstName = user.DisPlayName,
 
             };
             return Ok(userVm);

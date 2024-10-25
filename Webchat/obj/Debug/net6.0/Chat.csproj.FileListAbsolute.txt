@@ -292,3 +292,4 @@ E:\Chat\Webchat\obj\Debug\net6.0\refint\Chat.dll
 E:\Chat\Webchat\obj\Debug\net6.0\Chat.pdb
 E:\Chat\Webchat\obj\Debug\net6.0\Chat.genruntimeconfig.cache
 E:\Chat\Webchat\obj\Debug\net6.0\ref\Chat.dll
+E:\Chat\Webchat\obj\Debug\net6.0\Chat.sourcelink.json

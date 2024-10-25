@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Chat.Data
 {
@@ -19,8 +20,13 @@ namespace Chat.Data
 
             builder.Entity<IdentityRole>().Property(x => x.Id).HasMaxLength(50).IsRequired(true);
             builder.Entity<User>().Property(x => x.Id).HasMaxLength(50).IsRequired(true);
+
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
         public DbSet<User> User { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Message> Messages { get; set; }
+
     }
 }

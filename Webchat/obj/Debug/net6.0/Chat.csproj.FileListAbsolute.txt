@@ -293,3 +293,4 @@ E:\Chat\Webchat\obj\Debug\net6.0\Chat.pdb
 E:\Chat\Webchat\obj\Debug\net6.0\Chat.genruntimeconfig.cache
 E:\Chat\Webchat\obj\Debug\net6.0\ref\Chat.dll
 E:\Chat\Webchat\obj\Debug\net6.0\Chat.sourcelink.json
+E:\Chat\Webchat\bin\Debug\net6.0\AutoMapper.dll

@@ -40,6 +40,9 @@ builder.Services.AddAuthorization(options =>
     });
 });
 
+// Add AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+
 // Add Controllers for API
 builder.Services.AddControllers();
 

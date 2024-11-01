@@ -9,6 +9,54 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji1.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji1.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji2.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji2.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji3.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji3.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji4.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji4.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji5.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji5.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji6.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji6.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\emojis\\emoji7.png",
+      "PackagePath": "staticwebassets\\images\\emojis\\emoji7.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\icons\\avatar1.png",
+      "PackagePath": "staticwebassets\\images\\icons\\avatar1.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\icons\\avatar2.png",
+      "PackagePath": "staticwebassets\\images\\icons\\avatar2.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\icons\\avatar3.png",
+      "PackagePath": "staticwebassets\\images\\icons\\avatar3.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\icons\\avatar4.png",
+      "PackagePath": "staticwebassets\\images\\icons\\avatar4.png"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\images\\icons\\default-avatar.png",
+      "PackagePath": "staticwebassets\\images\\icons\\default-avatar.png"
+    },
+    {
       "Id": "E:\\Chat\\Webchat\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

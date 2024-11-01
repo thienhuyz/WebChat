@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "U2SG8eAz0Ds=",
+  "dgSpecHash": "Yy31Ufb4OvE=",
   "success": true,
   "projectFilePath": "E:\\Chat\\Webchat\\Chat.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dell\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

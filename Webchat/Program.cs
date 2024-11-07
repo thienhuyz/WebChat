@@ -9,8 +9,8 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages(options =>
+// Định nghĩa mvcBuilder bằng cách gán kết quả của AddRazorPages
+var mvcBuilder = builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AddAreaFolderRouteModelConvention("Identity", "/Account/", model =>
     {
@@ -22,6 +22,14 @@ builder.Services.AddRazorPages(options =>
         }
     });
 });
+
+// Kiểm tra môi trường và thêm Razor Runtime Compilation nếu là môi trường Development
+var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+if (environment == Environments.Development)
+{
+    mvcBuilder.AddRazorRuntimeCompilation();
+}
+
 
 // Add Authentication using Bearer token
 builder.Services.AddAuthentication()
@@ -140,5 +148,8 @@ app.UseSwaggerUI(c =>
 // Đảm bảo các API được ánh xạ
 app.MapControllers();
 app.MapRazorPages();
+
+// Thêm định tuyến mặc định cho Controller
+app.MapDefaultControllerRoute();
 
 app.Run();

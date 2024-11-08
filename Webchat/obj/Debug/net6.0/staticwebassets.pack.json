@@ -57,8 +57,24 @@
       "PackagePath": "staticwebassets\\images\\icons\\default-avatar.png"
     },
     {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\js\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat.js"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
       "Id": "E:\\Chat\\Webchat\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\Chat\\Webchat\\wwwroot\\lib\\KnockoutJS\\knockout-3.5.1.js",
+      "PackagePath": "staticwebassets\\lib\\KnockoutJS\\knockout-3.5.1.js"
     },
     {
       "Id": "E:\\Chat\\Webchat\\wwwroot\\lib\\bootstrap\\LICENSE",

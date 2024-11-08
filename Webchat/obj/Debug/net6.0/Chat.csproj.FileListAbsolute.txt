@@ -577,3 +577,4 @@ E:\Chat\Webchat\bin\Debug\net6.0\refs\System.Xml.XPath.XDocument.dll
 E:\Chat\Webchat\bin\Debug\net6.0\refs\WindowsBase.dll
 E:\Chat\Webchat\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 E:\Chat\Webchat\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+E:\Chat\Webchat\bin\Debug\net6.0\libman.json

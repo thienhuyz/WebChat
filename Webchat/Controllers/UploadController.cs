@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
 using Chat.Data;
 using Chat.Data.Entities;
+using Chat.Hubs;
 using Chat.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
 
 namespace Chat.Controllers
@@ -17,16 +20,18 @@ namespace Chat.Controllers
         private readonly ChatDbContext _context;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _environment;
+        private readonly IHubContext<ChatHub> _hubContext;
 
         public UploadController(ChatDbContext context,
             IMapper mapper,
             IWebHostEnvironment environment,
-
+            IHubContext<ChatHub> hubContext,
             IConfiguration configruation)
         {
             _context = context;
             _mapper = mapper;
             _environment = environment;
+            _hubContext = hubContext;
 
 
             FileSizeLimit = configruation.GetSection("FileUpload").GetValue<int>("FileSizeLimit");
@@ -79,7 +84,7 @@ namespace Chat.Controllers
 
                 // Send image-message to group
                 var messageViewModel = _mapper.Map<Message, MessageViewModel>(message);
-                //   await _hubContext.Clients.Group(room.Name).SendAsync("newMessage", messageViewModel);
+                await _hubContext.Clients.Group(room.Name).SendAsync("newMessage", messageViewModel);
 
                 return Ok();
             }

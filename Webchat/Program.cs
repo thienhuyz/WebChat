@@ -1,5 +1,6 @@
 using Chat.Data;
 using Chat.Data.Entities;
+using Chat.Hubs;
 using Chat.IdentityServer;
 using Chat.Services;
 using Microsoft.AspNetCore.Identity;
@@ -22,6 +23,9 @@ var mvcBuilder = builder.Services.AddRazorPages(options =>
         }
     });
 });
+
+// Thêm SignalR
+builder.Services.AddSignalR();
 
 // Kiểm tra môi trường và thêm Razor Runtime Compilation nếu là môi trường Development
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -151,5 +155,8 @@ app.MapRazorPages();
 
 // Thêm định tuyến mặc định cho Controller
 app.MapDefaultControllerRoute();
+
+// Map SignalR Hub
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();

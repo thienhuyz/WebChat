@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/aed0e7f4-1d48-4d65-b284-6d96100b8fa8)
 
 ## 🎯 Mô Tả Đề Tài
-Đề tài này nhằm xây dựng một hệ thống chat trực tuyến, cho phép người dùng tạo và tham gia các phòng chat riêng biệt để trao đổi thông tin theo nhóm hoặc cá nhân. Hệ thống sẽ cung cấp các tính năng cơ bản của một ứng dụng chat hiện đại, bao gồm khả năng tạo phòng mới, tham gia và rời khỏi phòng, gửi và nhận tin nhắn trong thời gian thực.
+Đề tài này nhằm phát triển một hệ thống chat trực tuyến, cho phép người dùng tạo và tham gia vào các phòng chat riêng biệt để trao đổi thông tin một cách hiệu quả và an toàn. Với giao diện thân thiện, người dùng có thể dễ dàng tạo các phòng chat nhóm hoặc cá nhân, quản lý danh sách phòng, và tự do tham gia hoặc rời khỏi các phòng khi cần.
 
 ## 📋 Các Tính Năng Chính
 
@@ -25,5 +25,11 @@
 | **Back-end**   | ASP.NET Core cho logic nghiệp vụ, IdentityServer4 cho xác thực người dùng, SignalR cho thời gian thực.  |
 | **Cơ sở dữ liệu** | SQL Server để lưu trữ thông tin người dùng, phòng chat và tin nhắn.                                |
 
+## 🌟 Getting Started
+1. Xoá tất cả file ở Webchat/Data/Migrations/
+2. Đổi tên sever name giống với SQL sever ở Webchat/appsettings.Development.json
+3. Xây dựng cơ sở dữ liệu
+4. Mở Package Manager Consolevà chạy các lệnh sau: update-database
+5. Vậy là xong... Chạy Dự án!
 
 

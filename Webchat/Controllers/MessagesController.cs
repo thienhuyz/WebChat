@@ -25,6 +25,8 @@ namespace Chat.Controllers
             _hubContext = hubContext;
         }
 
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Room>> Get(int id)
         {
@@ -35,6 +37,7 @@ namespace Chat.Controllers
             var messageViewModel = _mapper.Map<Message, MessageViewModel>(message);
             return Ok(messageViewModel);
         }
+
 
         [HttpGet("Room/{roomName}")]
         public IActionResult GetMessages(string roomName)
@@ -82,6 +85,7 @@ namespace Chat.Controllers
 
             return CreatedAtAction(nameof(Get), new { id = msg.Id }, createdMessage);
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)

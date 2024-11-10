@@ -8,7 +8,7 @@ namespace Chat.Mappings
     public class MessageProfile:Profile
     {
         public MessageProfile()
-        { 
+        {
             CreateMap<Message, MessageViewModel>()
                 .ForMember(dst => dst.From, opt => opt.MapFrom(x => x.FromUser.FullName))
                 .ForMember(dst => dst.Room, opt => opt.MapFrom(x => x.ToRoom.Name))

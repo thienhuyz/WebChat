@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Chat.Controllers
 {
@@ -17,7 +18,6 @@ namespace Chat.Controllers
         private readonly ChatDbContext _context;
         private readonly IMapper _mapper;
         private readonly IHubContext<ChatHub> _hubContext;
-
         public RoomsController(ChatDbContext context,
           IMapper mapper, IHubContext<ChatHub> hubContext)
         {
@@ -48,6 +48,8 @@ namespace Chat.Controllers
             var roomViewModel = _mapper.Map<Room, RoomViewModel>(room);
             return Ok(roomViewModel);
         }
+
+
 
         [HttpPost]
         public async Task<ActionResult<Room>> Create(RoomViewModel roomViewModel)

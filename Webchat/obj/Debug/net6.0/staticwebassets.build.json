@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e8PfmRMxb9rp4x0DAbqkQacQbiB+pAlc3V0Nyc6yh5Y=",
+  "Hash": "BebLkm/D9wXJLLeuOrnzILa7AfZzWHLPZSINEBrll1o=",
   "Source": "Chat",
   "BasePath": "_content/Chat",
   "Mode": "Default",
@@ -2675,6 +2675,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\KnockoutJS\\knockout-3.5.1.js"
+    },
+    {
+      "Identity": "E:\\Chat\\Webchat\\wwwroot\\uploads\\202431111119_380991501_740069091467196_5510261334677060752_n.jpg",
+      "SourceId": "Chat",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Chat\\Webchat\\wwwroot\\",
+      "BasePath": "_content/Chat",
+      "RelativePath": "uploads/202431111119_380991501_740069091467196_5510261334677060752_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\202431111119_380991501_740069091467196_5510261334677060752_n.jpg"
     }
   ]
 }

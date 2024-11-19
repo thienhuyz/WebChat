@@ -1,8 +1,8 @@
+using Album.Mail;
 using Chat.Data;
 using Chat.Data.Entities;
 using Chat.Hubs;
 using Chat.IdentityServer;
-using Chat.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +33,8 @@ if (environment == Environments.Development)
 {
     mvcBuilder.AddRazorRuntimeCompilation();
 }
+
+
 
 
 // Add Authentication using Bearer token
@@ -70,7 +72,15 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddDefaultTokenProviders();
 
 // Thêm dịch vụ gửi email (IEmailSender và EmailSenderService)
-builder.Services.AddTransient<IEmailSender, EmailSenderService>();
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddTransient<IEmailSender, SendMailService>();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.SignIn.RequireConfirmedEmail = true; // Bắt buộc xác nhận email
+    options.SignIn.RequireConfirmedAccount = true; // Kích hoạt xác nhận tài khoản
+});
+
 
 // Thêm IdentityServer và các cấu hình cho API, IdentityResources, Clients, Scopes
 builder.Services.AddIdentityServer(options =>
@@ -86,6 +96,8 @@ builder.Services.AddIdentityServer(options =>
 .AddInMemoryApiScopes(Config.ApiScopes)
 .AddAspNetIdentity<User>()
 .AddDeveloperSigningCredential();
+
+
 
 // Thêm Swagger với cấu hình bảo mật OAuth2 (Bearer Token)
 builder.Services.AddSwaggerGen(c =>

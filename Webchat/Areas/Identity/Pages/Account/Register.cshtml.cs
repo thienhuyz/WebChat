@@ -61,8 +61,8 @@ namespace Webchat.Areas.Identity.Pages.Account
             [Display(Name = "Full Name")]
             public string FullName { get; set; }
 
-            [Required]
-            [EmailAddress]
+            [Required (ErrorMessage ="Input {0} please!!")]
+            [EmailAddress(ErrorMessage = "Incorrect format Email!")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 

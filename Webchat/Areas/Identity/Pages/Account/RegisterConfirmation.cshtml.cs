@@ -20,12 +20,16 @@ namespace Webchat.Areas.Identity.Pages.Account
     {
         private readonly UserManager<User> _userManager;
         private readonly IEmailSender _sender;
+        private readonly SignInManager<User> _signInManager;
 
-        public RegisterConfirmationModel(UserManager<User> userManager, IEmailSender sender)
+
+        public RegisterConfirmationModel(UserManager<User> userManager, IEmailSender sender, SignInManager<User> signInManager)
         {
             _userManager = userManager;
             _sender = sender;
-        }
+            _signInManager = signInManager;
+
+        } 
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -59,6 +63,7 @@ namespace Webchat.Areas.Identity.Pages.Account
                 return NotFound($"Unable to load user with email '{email}'.");
             }
 
+
             Email = email;
             // Once you add a real email sender, you should remove this code that lets you confirm the account
             DisplayConfirmAccountLink = true;
@@ -73,6 +78,9 @@ namespace Webchat.Areas.Identity.Pages.Account
                     values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                     protocol: Request.Scheme);
             }
+
+
+
 
             return Page();
         }

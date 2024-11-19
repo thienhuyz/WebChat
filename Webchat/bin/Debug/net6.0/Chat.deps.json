@@ -60,6 +60,8 @@
           "Microsoft.AspNetCore.Connections.Abstractions": "6.0.0.0",
           "Microsoft.AspNetCore.CookiePolicy": "6.0.0.0",
           "Microsoft.AspNetCore.Cors": "6.0.0.0",
+          "Microsoft.AspNetCore.Cryptography.Internal.Reference": "6.0.0.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation.Reference": "6.0.0.0",
           "Microsoft.AspNetCore.DataProtection.Abstractions": "6.0.0.0",
           "Microsoft.AspNetCore.DataProtection": "6.0.0.0",
           "Microsoft.AspNetCore.DataProtection.Extensions": "6.0.0.0",
@@ -124,6 +126,7 @@
           "Microsoft.AspNetCore.WebUtilities": "6.0.0.0",
           "Microsoft.CSharp.Reference": "6.0.0.0",
           "Microsoft.Extensions.Caching.Abstractions.Reference": "6.0.0.0",
+          "Microsoft.Extensions.Caching.Memory.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Abstractions.Reference": "6.0.0.0",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0.0",
           "Microsoft.Extensions.Configuration.CommandLine": "6.0.0.0",
@@ -142,11 +145,14 @@
           "Microsoft.Extensions.Features": "6.0.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions.Reference": "6.0.0.0",
           "Microsoft.Extensions.FileProviders.Composite": "6.0.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded.Reference": "6.0.0.0",
           "Microsoft.Extensions.FileProviders.Physical": "6.0.0.0",
           "Microsoft.Extensions.FileSystemGlobbing": "6.0.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "6.0.0.0",
           "Microsoft.Extensions.Hosting": "6.0.0.0",
           "Microsoft.Extensions.Http": "6.0.0.0",
+          "Microsoft.Extensions.Identity.Core.Reference": "6.0.0.0",
+          "Microsoft.Extensions.Identity.Stores.Reference": "6.0.0.0",
           "Microsoft.Extensions.Localization.Abstractions": "6.0.0.0",
           "Microsoft.Extensions.Localization": "6.0.0.0",
           "Microsoft.Extensions.Logging.Abstractions.Reference": "6.0.0.0",
@@ -298,6 +304,7 @@
           "System.Text.Encoding.Reference": "6.0.0.0",
           "System.Text.Encoding.Extensions.Reference": "6.0.0.0",
           "System.Text.Encodings.Web.Reference": "6.0.0.0",
+          "System.Text.Json.Reference": "6.0.0.0",
           "System.Text.RegularExpressions.Reference": "6.0.0.0",
           "System.Threading.Channels": "6.0.0.0",
           "System.Threading.Reference": "6.0.0.0",
@@ -1003,9 +1010,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.46214"
           }
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.35": {
@@ -1017,9 +1021,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.46214"
           }
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         }
       },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.35": {
@@ -1770,9 +1771,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.45918"
           }
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
@@ -1825,9 +1823,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.46214"
           }
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.FileProviders.Embedded.dll": {}
         }
       },
       "Microsoft.Extensions.Identity.Core/6.0.35": {
@@ -1841,9 +1836,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.46214"
           }
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Identity.Core.dll": {}
         }
       },
       "Microsoft.Extensions.Identity.Stores/6.0.35": {
@@ -1857,9 +1849,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.46214"
           }
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.Identity.Stores.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/6.0.0": {
@@ -3329,9 +3318,6 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.3524.45918"
           }
-        },
-        "compile": {
-          "lib/net6.0/System.Text.Json.dll": {}
         }
       },
       "System.Text.RegularExpressions/4.3.0": {
@@ -3507,6 +3493,18 @@
       "Microsoft.AspNetCore.Cors/6.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Cors.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.AspNetCore.Cryptography.Internal.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
         },
         "compileOnly": true
       },
@@ -3894,6 +3892,12 @@
         },
         "compileOnly": true
       },
+      "Microsoft.Extensions.Caching.Memory.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "compileOnly": true
+      },
       "Microsoft.Extensions.Configuration.Abstractions.Reference/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -4002,6 +4006,12 @@
         },
         "compileOnly": true
       },
+      "Microsoft.Extensions.FileProviders.Embedded.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.FileProviders.Embedded.dll": {}
+        },
+        "compileOnly": true
+      },
       "Microsoft.Extensions.FileProviders.Physical/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.FileProviders.Physical.dll": {}
@@ -4029,6 +4039,18 @@
       "Microsoft.Extensions.Http/6.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Http.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.Extensions.Identity.Core.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Identity.Core.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.Extensions.Identity.Stores.Reference/6.0.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Identity.Stores.dll": {}
         },
         "compileOnly": true
       },
@@ -4935,6 +4957,12 @@
       "System.Text.Encodings.Web.Reference/6.0.0.0": {
         "compile": {
           "System.Text.Encodings.Web.dll": {}
+        },
+        "compileOnly": true
+      },
+      "System.Text.Json.Reference/6.0.0.0": {
+        "compile": {
+          "System.Text.Json.dll": {}
         },
         "compileOnly": true
       },
@@ -6868,6 +6896,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.AspNetCore.Cryptography.Internal.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Microsoft.AspNetCore.DataProtection.Abstractions/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7188,6 +7226,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Extensions.Caching.Memory.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Microsoft.Extensions.Configuration.Abstractions.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7278,6 +7321,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Extensions.FileProviders.Embedded.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Microsoft.Extensions.FileProviders.Physical/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -7299,6 +7347,16 @@
       "sha512": ""
     },
     "Microsoft.Extensions.Http/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Identity.Core.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Identity.Stores.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -8054,6 +8112,11 @@
       "sha512": ""
     },
     "System.Text.Encodings.Web.Reference/6.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Text.Json.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

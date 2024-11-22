@@ -3,11 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="alert alert-warning alert-dismissible d-none"
-     id="errorAlert" role="alert">
-    <span data-bind="text:serverInfoMessage"></span>
-    <button type="button" class="btn-close" aria-label="Close"></button>
-</div>
+
 
 <div class="d-flex flex-column justify-content-center align-items-center vh-100"
      data-bind="css: isLoading() ? 'd-flex' : 'd-none'">
@@ -193,7 +189,11 @@
     </div>
 </div>
 
-
+<div class="alert alert-warning alert-dismissible d-none"
+     id="errorAlert" role="alert">
+    <span data-bind="text:serverInfoMessage"></span>
+    <button type="button" class="btn-close" aria-label="Close"></button>
+</div>
 
 @section Scripts {
 
@@ -205,3 +205,18 @@
     <script src="~/js/chat.js"></script>
 
 }
+
+<style>
+    .app {
+        display: flex;
+        height: 90%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 12;
+        left: 0;
+        background-color: white;
+    }
+
+</style>

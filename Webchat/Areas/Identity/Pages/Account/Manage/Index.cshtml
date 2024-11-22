@@ -5,11 +5,12 @@
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
-<h3>@ViewData["Title"]</h3>
+@*<h3>@ViewData["Title"]</h3>*@
 <partial name="_StatusMessage" for="StatusMessage" />
 
 <div class="row">
     <div class="col-md-6">
+        <h4>PROFILE</h4>
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -69,6 +70,104 @@
         </form>
     </div>
 </div>
+
+<style>
+    body {
+        background: linear-gradient(to bottom, #f5f7fa, #c3cfe2); /* Nền từ trắng xám đến xanh nhạt */
+    }
+
+    /* Container chính */
+    .row {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh; /* Độ cao chiếm toàn màn hình */
+    }
+
+    .col-md-6 {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9); /* Nền trắng trong suốt */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+        border-radius: 8px; /* Bo góc */
+        width: 400px; /* Cố định chiều rộng */
+    }
+
+    h4 {
+        color: #333;
+        text-align: center;
+        font-size: 32px; /* Kích thước vừa phải */
+        margin-bottom: 12px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Form styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #555;
+    }
+
+    .form-control {
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+    /* Avatar Selection Styling */
+    .avatar-option {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        margin: 0 5px;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="radio"]:checked + .avatar-option {
+        border-color: #007bff; /* Màu xanh khi được chọn */
+    }
+
+    /* Submit Button */
+    #update-profile-button {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        #update-profile-button:hover {
+            background-color: #0056b3;
+        }
+
+    /* Error Message Styling */
+    .text-danger {
+        font-size: 14px;
+        color: #e74c3c;
+    }
+</style>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

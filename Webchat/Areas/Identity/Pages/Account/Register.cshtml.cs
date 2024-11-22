@@ -118,8 +118,15 @@ namespace Webchat.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _emailSender.SendEmailAsync(Input.Email,"Xác nhận email của bạn", 
+                                                       $@"<p>Chào {Input.FullName},</p>
+                                                        <p>Cảm ơn bạn đã đăng ký tài khoản tại Webchat. Vui lòng xác nhận tài khoản của bạn bằng cách nhấn vào liên kết bên dưới:</p>
+                                                        <p><a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>Xác nhận tài khoản</a></p>
+                                                        <p>Nếu bạn không thực hiện yêu cầu này, vui lòng bỏ qua email này.</p>
+                                                        <p>Trân trọng,</p>
+                                                        <p>Đội ngũ Webchat</p>"
+                                                         );
+
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

@@ -71,6 +71,8 @@ namespace Chat.Hubs
 
                     // Tell others to update their list of users
                     await Clients.OthersInGroup(roomName).SendAsync("addUser", user);
+
+                    await Clients.Group(roomName).SendAsync("userJoinedRoom", user.FullName ?? user.Username, roomName);
                 }
             }
             catch (Exception ex)
@@ -151,6 +153,22 @@ namespace Chat.Hubs
 
             return "Web";
         }
+
+        public async Task SendOffer(string receiverConnectionId, string offer)
+        {
+            await Clients.Client(receiverConnectionId).SendAsync("ReceiveOffer", Context.ConnectionId, offer);
+        }
+
+        public async Task SendAnswer(string callerConnectionId, string answer)
+        {
+            await Clients.Client(callerConnectionId).SendAsync("ReceiveAnswer", answer);
+        }
+
+        public async Task SendIceCandidate(string receiverConnectionId, string candidate)
+        {
+            await Clients.Client(receiverConnectionId).SendAsync("ReceiveIceCandidate", candidate);
+        }
+
 
     }
 }

@@ -33,10 +33,26 @@
 
     connection.on("addChatRoom", function (room) {
         viewModel.roomAdded(new ChatRoom(room.id, room.name));
+
+        // Hiển thị thông báo
+        const notification = document.getElementById("createNotification");
+        notification.textContent = `Phòng "${room.name}" đã được tạo thành công!`;
+        notification.classList.remove("d-none", "alert-danger");
+        notification.classList.add("alert-success");
+
+        setTimeout(() => notification.classList.add("d-none"), 2000); 
     });
 
     connection.on("updateChatRoom", function (room) {
         viewModel.roomUpdated(new ChatRoom(room.id, room.name));
+
+        // Hiển thị thông báo 
+        const notification = document.getElementById("updateNotification");
+        notification.textContent = `Đổi tên thành phòng "${room.name}" thành công!`;
+        notification.classList.remove("d-none", "alert-danger");
+        notification.classList.add("alert-info");
+
+        setTimeout(() => notification.classList.add("d-none"), 2000); 
     });
 
     connection.on("removeChatRoom", function (id) {
@@ -47,14 +63,15 @@
         viewModel.serverInfoMessage(message);
         const errorAlert = document.getElementById("errorAlert");
         errorAlert.classList.remove("d-none");
-        setTimeout(() => errorAlert.classList.add("d-none"), 5000);
+        setTimeout(() => errorAlert.classList.add("d-none"), 2000);
     });
 
+   
     connection.on("onRoomDeleted", function (message) {
         viewModel.serverInfoMessage(message);
         const errorAlert = document.getElementById("errorAlert");
         errorAlert.classList.remove("d-none");
-        setTimeout(() => errorAlert.classList.add("d-none"), 5000);
+        setTimeout(() => errorAlert.classList.add("d-none"), 2000);
 
         if (viewModel.chatRooms().length == 0) {
             viewModel.joinedRoom("");
@@ -98,17 +115,22 @@
             }
         });
 
-        self.sendNewMessage = function () {
-            var text = self.message();
-            if (text.startsWith("/")) {
-                var receiver = text.substring(text.indexOf("(") + 1, text.indexOf(")"));
-                var message = text.substring(text.indexOf(")") + 1);
-                self.sendPrivate(receiver, message);
+        self.sendNewMessage = function (message) {
+            if (!message) {
+                message = self.message(); // Lấy tin nhắn từ input nếu không có truyền vào
+            }
+
+            if (message.startsWith("/")) {
+                var receiver = message.substring(message.indexOf("(") + 1, message.indexOf(")"));
+                var content = message.substring(message.indexOf(")") + 1);
+                self.sendPrivate(receiver, content);
             } else {
-                self.sendToRoom(self.joinedRoom(), self.message());
+                self.sendToRoom(self.joinedRoom(), message);
             }
             self.message("");
         };
+
+
 
         self.sendToRoom = function (roomName, message) {
             if (roomName && message) {
@@ -231,6 +253,16 @@
         };
     }
 
+    connection.on("userJoinedRoom", function (username, roomName) {
+        const notification = document.getElementById("userJoinNotification");
+        notification.textContent = `Người dùng "${username}" đã vào phòng "${roomName}"!`;
+        notification.classList.remove("d-none", "alert-danger");
+        notification.classList.add("alert-primary");
+
+        setTimeout(() => notification.classList.add("d-none"), 2000); 
+    });
+
+
     function ChatRoom(id, name) {
         this.id = ko.observable(id);
         this.name = ko.observable(name);
@@ -254,4 +286,75 @@
 
     var viewModel = new AppViewModel();
     ko.applyBindings(viewModel);
+
+    document.getElementById('voiceChatButton').addEventListener('click', async () => {
+        const button = document.getElementById('voiceChatButton');
+        const statusOverlay = document.getElementById('voice-chat-status'); 
+        const transcriptArea = document.getElementById('transcript-area'); 
+        const transcriptText = document.getElementById('transcript-text'); // Nội dung nói
+        const confirmSendButton = document.getElementById('confirm-send'); // Nút gửi
+        const cancelTranscriptButton = document.getElementById('cancel-transcript'); // Nút xóa
+        let localStream;
+
+        try {
+            // Bật microphone
+            localStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            console.log("Microphone activated");
+            button.classList.add('active'); 
+            statusOverlay.classList.remove('d-none'); 
+
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = "vi-VN"; 
+            recognition.interimResults = true; // Kết quả từng phần
+            recognition.continuous = true; // Ghi âm liên tục
+
+            // Khi có kết quả nhận dạng
+            recognition.onresult = (event) => {
+                const transcript = Array.from(event.results)
+                    .map(result => result[0].transcript)
+                    .join(''); 
+                transcriptText.textContent = transcript; 
+                transcriptArea.classList.remove('d-none'); 
+            };
+
+            // Khi có lỗi
+            recognition.onerror = (event) => {
+                console.error("Speech recognition error:", event.error);
+                statusOverlay.classList.add('d-none'); 
+                transcriptArea.classList.add('d-none'); 
+                alert("Lỗi nhận dạng giọng nói! Vui lòng thử lại.");
+            };
+
+            recognition.start(); // Bắt đầu nhận dạng
+
+            // Xử lý nút Gửi
+            confirmSendButton.addEventListener('click', () => {
+                const finalTranscript = transcriptText.textContent.trim(); 
+                if (finalTranscript) {
+                    viewModel.sendNewMessage(finalTranscript); 
+                    alert("Tin nhắn đã được gửi.");
+                }
+                statusOverlay.classList.add('d-none');
+                transcriptArea.classList.add('d-none');
+                transcriptText.textContent = "";
+                recognition.stop(); 
+            });
+
+            // Xử lý nút Xóa
+            cancelTranscriptButton.addEventListener('click', () => {
+                statusOverlay.classList.add('d-none');
+                transcriptArea.classList.add('d-none');
+                transcriptText.textContent = "";
+                alert("Nội dung đã được xóa.");
+                recognition.stop(); 
+            });
+
+        } catch (error) {
+            console.error("Error accessing microphone:", error);
+            alert("Không thể truy cập microphone. Vui lòng kiểm tra cài đặt.");
+            statusOverlay.classList.add('d-none'); 
+        }
+    });
+
+
 });

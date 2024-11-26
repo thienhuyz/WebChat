@@ -321,8 +321,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\dell\\Desktop\\WebChat\\Webchat\\wwwroot\\uploads\\202417241103_df6c8c7f-f801-4532-a7b0-a7657f2f6df3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\202417241103_df6c8c7f-f801-4532-a7b0-a7657f2f6df3.jpg"
+    },
+    {
       "Id": "C:\\Users\\dell\\Desktop\\WebChat\\Webchat\\wwwroot\\uploads\\202431111119_380991501_740069091467196_5510261334677060752_n.jpg",
       "PackagePath": "staticwebassets\\uploads\\202431111119_380991501_740069091467196_5510261334677060752_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\WebChat\\Webchat\\wwwroot\\uploads\\202459221115_1f922aa1-845d-45b5-82a8-36c16a4b4b34.jpg",
+      "PackagePath": "staticwebassets\\uploads\\202459221115_1f922aa1-845d-45b5-82a8-36c16a4b4b34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Desktop\\WebChat\\Webchat\\wwwroot\\uploads\\202459221118_z4986114161131_f93027c3ce7003552f8d7a35d73dc334-fotor-bg-remover-2024112022723.png",
+      "PackagePath": "staticwebassets\\uploads\\202459221118_z4986114161131_f93027c3ce7003552f8d7a35d73dc334-fotor-bg-remover-2024112022723.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Chat.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -131,7 +131,7 @@ body {
         .sidebar ul li a {
             display: block;
             padding: 2px 10px;
-            font-size: 14px;
+            font-size: 16px;
             text-decoration: none;
         }
 
@@ -288,6 +288,7 @@ body {
         color: #777;
         min-width: 220px;
         max-width: 500px;
+        border-radius: 20px;
     }
 
         .chat-message .message-content img.post-image {

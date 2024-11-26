@@ -90,7 +90,6 @@ namespace Chat.Controllers
             await _context.SaveChangesAsync();
 
             await _hubContext.Clients.All.SendAsync("updateChatRoom", new { id = room.Id, room.Name });
-
             return NoContent();
         }
 
@@ -109,7 +108,8 @@ namespace Chat.Controllers
             await _context.SaveChangesAsync();
 
             await _hubContext.Clients.All.SendAsync("removeChatRoom", room.Id);
-            await _hubContext.Clients.Group(room.Name).SendAsync("onRoomDeleted", string.Format("Room {0} has been deleted.\nYou are moved to the first available room!", room.Name));
+            await _hubContext.Clients.Group(room.Name).SendAsync("onRoomDeleted", string.Format(
+"Phòng {0} đã bị xóa.\nBạn đã được chuyển đến phòng khả dụng đầu tiên!", room.Name));
 
             return NoContent();
         }

@@ -1280,6 +1280,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\KnockoutJS\knockout-3.5.1.js))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202417241103_df6c8c7f-f801-4532-a7b0-a7657f2f6df3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Chat</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Chat</BasePath>
+      <RelativePath>uploads/202417241103_df6c8c7f-f801-4532-a7b0-a7657f2f6df3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202417241103_df6c8c7f-f801-4532-a7b0-a7657f2f6df3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202431111119_380991501_740069091467196_5510261334677060752_n.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Chat</SourceId>
@@ -1295,6 +1311,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202431111119_380991501_740069091467196_5510261334677060752_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202459221115_1f922aa1-845d-45b5-82a8-36c16a4b4b34.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Chat</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Chat</BasePath>
+      <RelativePath>uploads/202459221115_1f922aa1-845d-45b5-82a8-36c16a4b4b34.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202459221115_1f922aa1-845d-45b5-82a8-36c16a4b4b34.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202459221118_z4986114161131_f93027c3ce7003552f8d7a35d73dc334-fotor-bg-remover-2024112022723.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Chat</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Chat</BasePath>
+      <RelativePath>uploads/202459221118_z4986114161131_f93027c3ce7003552f8d7a35d73dc334-fotor-bg-remover-2024112022723.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\202459221118_z4986114161131_f93027c3ce7003552f8d7a35d73dc334-fotor-bg-remover-2024112022723.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

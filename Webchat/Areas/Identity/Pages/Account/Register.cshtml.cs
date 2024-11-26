@@ -53,12 +53,12 @@ namespace Webchat.Areas.Identity.Pages.Account
         {
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 5)]
-            [Display(Name = "Username")]
+            [Display(Name = "Tên đăng nhập")]
             public string UserName { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 5)]
-            [Display(Name = "Full Name")]
+            [Display(Name = "Họ tên")]
             public string FullName { get; set; }
 
             [Required (ErrorMessage ="Input {0} please!!")]
@@ -69,16 +69,16 @@ namespace Webchat.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Mật khẩu")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Xác nhận mật khẩu")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
             [Required]
-            [Display(Name = "Avatar")]
+            [Display(Name = "Ảnh đại diện")]
             public string Avatar { get; set; }
         }
 

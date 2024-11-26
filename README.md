@@ -26,7 +26,7 @@
 | **Cơ sở dữ liệu** | SQL Server để lưu trữ thông tin người dùng, phòng chat và tin nhắn.                                |
 
 ## 🌟 Getting Started
-1. Xoá tất cả file ở Webchat/Data/Migrations/
+1. Xoá thư mục ở Webchat/Data/Migrations/
 2. Đổi tên sever name giống với SQL sever ở Webchat/appsettings.Development.json
 3. Xây dựng cơ sở dữ liệu
 4. Mở Package Manager Consolevà chạy các lệnh sau: update-database
